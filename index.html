@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Interactive Resume</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="resume-container">
+        <div class="resume">
+            <section id="personal-info" class="card">
+                <div class="personal-header">
+                    <img src="photo.png" class="profile-pic">
+                    <div class="personal-details">
+                        <h1>John Doe</h1>
+                        <p>Email: john.doe@example.com</p>
+                        <p>Phone: 123-456-7890</p>
+                    </div>
+                </div>
+            </section>
+            <section id="education" class="card">
+                <h2>Education</h2>
+                <p>B.Sc. in Computer Science - University X (2020)</p>
+            </section>
+
+            <section id="skills" class="card">
+                <h2>Skills</h2>
+                <div id="skills-list" class="skills-container">
+                    <span class="skill-chip">JavaScript</span>
+                    <span class="skill-chip">TypeScript</span>
+                    <span class="skill-chip">HTML & CSS</span>
+                </div>
+            </section>
+
+            <section id="work-experience" class="card">
+                <h2>Work Experience</h2>
+                <p>Software Developer at Company Y (2021 - Present)</p>
+            </section>
+
+            <button class="toggle-btn" id="toggleAll">Hide All Sections</button>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
