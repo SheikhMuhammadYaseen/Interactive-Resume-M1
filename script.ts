@@ -1,17 +1,22 @@
+const toggleAllButton = document.getElementById("toggleAll") as HTMLButtonElement;
+const sectionsToToggle = ["skills", "education", "work-experience"];
 
-const toggleSkillsButton = document.getElementById("toggleAll") as HTMLButtonElement;
-const sections = ["education", "skills", "work-experience"];
+toggleAllButton.addEventListener("click", () => {
+    let areSectionsHidden = false;
 
-toggleSkillsButton.addEventListener("click", () => {
-    sections.forEach(sectionId => {
+    sectionsToToggle.forEach(sectionId => {
         const section = document.getElementById(sectionId) as HTMLElement;
-        
-        if (section) {
-            if (section.style.display === "none" || section.style.display === "") {
-                section.style.display = "block";
-            } else {
-                section.style.display = "none";
-            }
+        if (section && (section.style.display === "none" || section.style.display === "")) {
+            areSectionsHidden = true;
         }
     });
+
+    sectionsToToggle.forEach(sectionId => {
+        const section = document.getElementById(sectionId) as HTMLElement;
+        if (section) {
+            section.style.display = areSectionsHidden ? "block" : "none";
+        }
+    });
+
+    toggleAllButton.textContent = areSectionsHidden ? "Hide All Sections" : "Show All Sections";
 });
